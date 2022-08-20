@@ -1,0 +1,20 @@
+<%- include("sir") -%>
+    <div class="box" id="heading">
+        <h1><%= din %></h1>
+    </div>
+    <div class="box">
+<%       for(var i=0;i< newItem.length;i++) { %>
+        <div class="item">
+            <input type="checkbox">
+            <p><%= newItem[i] %></p>
+        </div>
+<%          } %>
+    <form class="fm" action="/" method="post">
+        <input name="listItem" type="text" placeholder="Write your work here" autocomplete="off">
+        <button class="btn" type="submit">+</button>
+    </form>
+    <form action="/clear" method="post">
+        <button class="clrBtn" type="submit">Clear All</button>
+    </form>
+    </div>
+<%- include("pair") -%>
